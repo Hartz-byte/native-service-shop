@@ -2,10 +2,12 @@ import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
+import { StatusBar } from "react-native";
 
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
+  // font load
   const [loaded] = useFonts({
     SFPRODISPLAYREGULAR: require("../assets/fonts/SFPRODISPLAYREGULAR.ttf"),
     SFPRODISPLAYMEDIUM: require("../assets/fonts/SFPRODISPLAYMEDIUM.ttf"),
@@ -27,11 +29,17 @@ export default function RootLayout() {
   }
 
   return (
-    <Stack>
-      <Stack.Screen name="index" options={{ headerShown: false }} />
-      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+    <>
+      {/* statusbar */}
+      <StatusBar barStyle="dark-content" />
 
-      <Stack.Screen name="+not-found" />
-    </Stack>
+      {/* stack */}
+      <Stack>
+        <Stack.Screen name="index" options={{ headerShown: false }} />
+        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+
+        <Stack.Screen name="+not-found" />
+      </Stack>
+    </>
   );
 }
