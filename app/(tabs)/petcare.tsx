@@ -4,6 +4,7 @@ import React from "react";
 import HeaderComponent from "@/components/HeaderComponent";
 import CustomSearchArea from "@/components/CustomSearchArea";
 import CarouselComponent from "@/components/CarouselComponent";
+import PopularServicesComponent from "@/components/PopularServicesComponent";
 
 const Petcare = () => {
   return (
@@ -17,6 +18,9 @@ const Petcare = () => {
 
         {/* carousel component */}
         <CarouselComponent />
+
+        {/* popular services component */}
+        <PopularServicesComponent />
       </View>
     </ScrollView>
   );
@@ -28,8 +32,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
   },
   container: {
-    width: "100%",
-    height: "100%",
     backgroundColor: "#fff",
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
