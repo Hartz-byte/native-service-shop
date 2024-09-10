@@ -24,7 +24,12 @@ const Home = () => {
         {/* Infinite icon */}
         <View style={styles.infiniteIconContainer}>
           <TouchableOpacity>
-            <Ionicons name="infinite" size={30} color="white" />
+            <Ionicons
+              name="infinite"
+              size={30}
+              color="white"
+              style={styles.rotatedIcon}
+            />
           </TouchableOpacity>
 
           {/* Notification circle */}
@@ -71,6 +76,9 @@ const styles = StyleSheet.create({
   infiniteIconContainer: {
     position: "relative",
     alignItems: "center",
+  },
+  rotatedIcon: {
+    transform: [{ rotateY: "180deg" }],
   },
   notificationCircle: {
     position: "absolute",

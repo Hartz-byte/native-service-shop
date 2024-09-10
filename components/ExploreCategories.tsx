@@ -8,6 +8,7 @@ import EventsImage from "../assets/images/events.png";
 import HealthcareImage from "../assets/images/healthcare.png";
 import HomecareImage from "../assets/images/homecare.png";
 import PetcareImage from "../assets/images/petcare.png";
+import { router } from "expo-router";
 
 import { Entypo } from "@expo/vector-icons";
 
@@ -57,7 +58,7 @@ const ExploreCategories = () => {
         {/* pet care, home care and events */}
         <View style={styles.flex}>
           {/* pet care */}
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => router.push("petcare")}>
             <LinearGradient
               colors={["#FEF2F3", "#FFB0DD"]}
               start={{ x: 0, y: 0 }}

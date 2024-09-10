@@ -176,6 +176,45 @@ export default function Layout() {
           ),
         }}
       />
+
+      {/* pet care */}
+      <Tabs.Screen
+        name="petcare"
+        options={{
+          headerShown: false,
+          tabBarButton: () => null, // hidden
+          tabBarIcon: ({ focused, color, size }) => (
+            <View
+              style={{
+                flexDirection: "row",
+                alignItems: "center",
+                backgroundColor: focused ? "#EEE6FF" : "transparent",
+                borderRadius: 20,
+                paddingHorizontal: 20,
+                paddingVertical: 8,
+                gap: 6,
+              }}
+            >
+              <FontAwesome5
+                name="user"
+                size={24}
+                color={focused ? "#905CFF" : "#000"}
+              />
+              {focused && (
+                <Text
+                  style={{
+                    color: "#060735",
+                    fontSize: 14,
+                    fontFamily: "Lato-Bold",
+                  }}
+                >
+                  Profile
+                </Text>
+              )}
+            </View>
+          ),
+        }}
+      />
     </Tabs>
   );
 }
