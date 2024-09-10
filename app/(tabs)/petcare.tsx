@@ -1,13 +1,9 @@
-import {
-  ScrollView,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from "react-native";
+import { ScrollView, StyleSheet, View } from "react-native";
 import React from "react";
+
 import HeaderComponent from "@/components/HeaderComponent";
 import CustomSearchArea from "@/components/CustomSearchArea";
+import CarouselComponent from "@/components/CarouselComponent";
 
 const Petcare = () => {
   return (
@@ -18,6 +14,9 @@ const Petcare = () => {
       <View style={styles.container}>
         {/* custom search area */}
         <CustomSearchArea type="type2" />
+
+        {/* carousel component */}
+        <CarouselComponent />
       </View>
     </ScrollView>
   );
