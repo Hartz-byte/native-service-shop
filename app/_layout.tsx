@@ -13,6 +13,7 @@ export default function RootLayout() {
     SFPRODISPLAYBOLD: require("../assets/fonts/SFPRODISPLAYBOLD.ttf"),
     SFPRODISPLAYHEAVYITALIC: require("../assets/fonts/SFPRODISPLAYHEAVYITALIC.ttf"),
     SFPRODISPLAYBLACKITALIC: require("../assets/fonts/SFPRODISPLAYBLACKITALIC.ttf"),
+    "Lato-Bold": require("../assets/fonts/Lato-Bold.ttf"),
   });
 
   useEffect(() => {
