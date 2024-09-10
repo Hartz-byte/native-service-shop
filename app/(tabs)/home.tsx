@@ -7,14 +7,16 @@ import {
 } from "react-native";
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
-import { Octicons, Ionicons, Entypo } from "@expo/vector-icons";
+import { Octicons, Ionicons } from "@expo/vector-icons";
 
 import CustomSearchArea from "@/components/CustomSearchArea";
-import ChipsComponent from "@/components/ChipsComponent";
+import ExploreCategories from "@/components/ExploreCategories";
+import PopularSectors from "@/components/PopularSectors";
+import RecommendedComponent from "@/components/RecommendedComponent";
 
 const Home = () => {
   return (
-    <View style={styles.mainContainer}>
+    <ScrollView style={styles.mainContainer}>
       {/* Linear gradient, and side buttons */}
       <LinearGradient
         colors={["#9766FF", "#F7F3FF"]}
@@ -69,22 +71,15 @@ const Home = () => {
       {/* radius design */}
       <View style={styles.radiusDesign} />
 
-      {/* explore categories */}
-      <View>
-        <View style={styles.exploreContainer}>
-          <Text style={styles.exploreText}>Explore Categories</Text>
+      {/* explore categories component */}
+      <ExploreCategories />
 
-          <TouchableOpacity>
-            <Entypo name="dots-three-horizontal" size={24} color="black" />
-          </TouchableOpacity>
-        </View>
+      {/* popular sectors component */}
+      <PopularSectors />
 
-        {/* chips */}
-        <View>
-          <ChipsComponent />
-        </View>
-      </View>
-    </View>
+      {/* recommended for you component */}
+      <RecommendedComponent />
+    </ScrollView>
   );
 };
 
@@ -190,16 +185,6 @@ const styles = StyleSheet.create({
     zIndex: 99,
     top: 115,
     borderTopLeftRadius: 30,
-  },
-  exploreContainer: {
-    paddingHorizontal: 20,
-    marginTop: 115,
-    flexDirection: "row",
-    justifyContent: "space-between",
-  },
-  exploreText: {
-    fontWeight: "bold",
-    lineHeight: 16.94,
   },
 });
 
