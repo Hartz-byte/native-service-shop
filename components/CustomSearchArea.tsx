@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   type1: {
-    width: 240,
+    width: 248,
     backgroundColor: "white",
   },
   type2: {

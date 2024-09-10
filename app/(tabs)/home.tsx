@@ -7,8 +7,10 @@ import {
 } from "react-native";
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
-import { Octicons, Ionicons } from "@expo/vector-icons";
+import { Octicons, Ionicons, Entypo } from "@expo/vector-icons";
+
 import CustomSearchArea from "@/components/CustomSearchArea";
+import ChipsComponent from "@/components/ChipsComponent";
 
 const Home = () => {
   return (
@@ -48,11 +50,39 @@ const Home = () => {
         <View style={styles.searchArea}>
           <CustomSearchArea type="type1" />
         </View>
+
+        {/* circle design */}
+        <View style={styles.designContainer}>
+          {/* purple circle */}
+          <View style={styles.purpleCircle} />
+
+          {/* yellow circle */}
+          <View style={styles.whiteCircle}>
+            <View style={styles.yellowCircle} />
+          </View>
+
+          {/* red circle */}
+          <View style={styles.redCircle} />
+        </View>
       </View>
+
+      {/* radius design */}
+      <View style={styles.radiusDesign} />
 
       {/* explore categories */}
       <View>
-        <View style={styles.borderDesign} />
+        <View style={styles.exploreContainer}>
+          <Text style={styles.exploreText}>Explore Categories</Text>
+
+          <TouchableOpacity>
+            <Entypo name="dots-three-horizontal" size={24} color="black" />
+          </TouchableOpacity>
+        </View>
+
+        {/* chips */}
+        <View>
+          <ChipsComponent />
+        </View>
       </View>
     </View>
   );
@@ -71,7 +101,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     borderBottomLeftRadius: 50,
     borderBottomRightRadius: 50,
-    padding: 30,
+    padding: 20,
     paddingTop: 60,
   },
   infiniteIconContainer: {
@@ -107,18 +137,69 @@ const styles = StyleSheet.create({
     fontSize: 24,
   },
   textContainer: {
-    marginHorizontal: 30,
+    marginHorizontal: 20,
     marginVertical: 20,
   },
   searchArea: {
-    marginLeft: 30,
+    marginLeft: 20,
   },
-  borderDesign: {
+  designContainer: {
+    position: "absolute",
+    right: 0,
+    overflow: "hidden",
+    borderTopRightRadius: 30,
+  },
+  purpleCircle: {
+    width: 32,
+    height: 32,
+    borderRadius: 50,
+    backgroundColor: "#8002FF",
+    top: 15,
+    zIndex: -3,
+  },
+  whiteCircle: {
+    width: 89,
+    height: 89,
+    borderRadius: 50,
+    backgroundColor: "#FFFFFF",
+    justifyContent: "center",
+    alignItems: "center",
+    zIndex: -4,
+    left: 22,
+    top: -60,
+  },
+  yellowCircle: {
+    width: 60,
+    height: 60,
+    borderRadius: 50,
+    backgroundColor: "#FFE600",
+  },
+  redCircle: {
+    width: 17,
+    height: 17,
+    borderRadius: 50,
+    backgroundColor: "#FF5E5E",
+    zIndex: -3,
+    left: 50,
+    top: -70,
+  },
+  radiusDesign: {
     width: "100%",
-    height: 20,
-    backgroundColor: "red",
+    height: 40,
+    backgroundColor: "white",
     zIndex: 99,
     top: 115,
+    borderTopLeftRadius: 30,
+  },
+  exploreContainer: {
+    paddingHorizontal: 20,
+    marginTop: 115,
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  exploreText: {
+    fontWeight: "bold",
+    lineHeight: 16.94,
   },
 });
 
