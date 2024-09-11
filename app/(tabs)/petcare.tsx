@@ -5,6 +5,7 @@ import HeaderComponent from "@/components/HeaderComponent";
 import CustomSearchArea from "@/components/CustomSearchArea";
 import CarouselComponent from "@/components/CarouselComponent";
 import PopularServicesComponent from "@/components/PopularServicesComponent";
+import ServiceProviderComponent from "@/components/ServiceProviderComponent";
 
 const Petcare = () => {
   return (
@@ -21,6 +22,9 @@ const Petcare = () => {
 
         {/* popular services component */}
         <PopularServicesComponent />
+
+        {/* service providers component */}
+        <ServiceProviderComponent />
       </View>
     </ScrollView>
   );

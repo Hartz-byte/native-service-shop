@@ -98,7 +98,6 @@ const PopularServicesComponent = () => {
 
 const styles = StyleSheet.create({
   exploreContainer: {
-    paddingHorizontal: 20,
     flexDirection: "row",
     justifyContent: "space-between",
   },
