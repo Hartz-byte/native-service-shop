@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
     height: 81,
   },
   text: {
-    fontFamily: "SFPRODISPLAYBLACKITALIC",
+    fontFamily: "SFPRODISPLAYBOLD",
     fontSize: 12,
     lineHeight: 18,
   },
@@ -126,7 +126,7 @@ const styles = StyleSheet.create({
   },
   exploreText: {
     color: "#fff",
-    fontFamily: "SFPRODISPLAYBLACKITALIC",
+    fontFamily: "SFPRODISPLAYBOLD",
     fontSize: 10,
   },
   leftDesign: {

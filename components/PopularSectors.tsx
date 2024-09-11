@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
   },
   text: {
-    fontFamily: "SFPRODISPLAYBLACKITALIC",
+    fontFamily: "SFPRODISPLAYBOLD",
     paddingLeft: 15,
     paddingTop: 15,
     fontSize: 18,

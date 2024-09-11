@@ -142,7 +142,7 @@ const styles = StyleSheet.create({
   },
   image: {},
   text: {
-    fontFamily: "SFPRODISPLAYSEMIBOLDITALIC",
+    fontFamily: "SFPRODISPLAYBOLD",
     fontSize: 12,
     lineHeight: 14.32,
     color: "#333333",
