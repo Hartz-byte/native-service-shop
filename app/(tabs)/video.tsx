@@ -3,12 +3,18 @@ import React from "react";
 
 const Video = () => {
   return (
-    <View>
+    <View style={styles.container}>
       <Text>Video</Text>
     </View>
   );
 };
 
-export default Video;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+});
 
-const styles = StyleSheet.create({});
+export default Video;
