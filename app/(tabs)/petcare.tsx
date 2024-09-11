@@ -6,6 +6,7 @@ import CustomSearchArea from "@/components/CustomSearchArea";
 import CarouselComponent from "@/components/CarouselComponent";
 import PopularServicesComponent from "@/components/PopularServicesComponent";
 import ServiceProviderComponent from "@/components/ServiceProviderComponent";
+import RatingsComponent from "@/components/RatingsComponent";
 
 const Petcare = () => {
   return (
@@ -25,6 +26,9 @@ const Petcare = () => {
 
         {/* service providers component */}
         <ServiceProviderComponent />
+
+        {/* ratings component */}
+        <RatingsComponent />
       </View>
     </ScrollView>
   );
